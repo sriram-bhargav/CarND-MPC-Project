@@ -11,6 +11,7 @@ We use kinematic model as vehicle model. Take a look below for state model used 
 Actuator values are the acceleration (a) - which is controlled by throttle, and the steering angle (steering_angle/delta).
 
 Update equations for the kinematic model:
+
 <img src="./update_equations.png" width="425"/>
 
 ## Timestep Length and Elapsed Duration (N & dt)
