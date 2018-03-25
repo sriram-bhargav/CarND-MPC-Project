@@ -18,9 +18,11 @@ Update equations for the kinematic model:
 N = 10 and dt = 0.1 are the final chosen values for this project after some trial and error (for reference velocity = 70mph).
 
 Previous values tried (for reference velocity = 70mph):
-N = 10 and dt = 0.05 - creates zigzag behavior because of small dt
-N = 20 and dt = 0.05 - creates zigzag behavior because of small dt
-N = 20 and dt = 0.1 - larger N seems unnecessary
+```
+* N = 10 and dt = 0.05 - creates zigzag behavior because of small dt
+* N = 20 and dt = 0.05 - creates zigzag behavior because of small dt
+* N = 20 and dt = 0.1 - larger N seems unnecessary
+```
 
 ## Polynomial Fitting and Preprocessing
 The waypoints are converted into vehicle coordinate system before polynomial fitting:
