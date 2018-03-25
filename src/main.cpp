@@ -119,7 +119,8 @@ int main() {
           // Calculate orientation error.
           double epsi = - atan(coeffs[1]);
           
-          double latency = 0.1; //100 ms time delay for actuations
+          // 100 ms time delay for actuations.
+          double latency = 0.1;
           double Lf = 2.67;
 
           // Calculate future state.
@@ -129,6 +130,8 @@ int main() {
           double v_next = v + throttle_value*latency;
           double cte_next = cte + v*sin(epsi)*latency;
           double epsi_next = epsi + psi_next;
+          
+          // Finally update state accordindly.
           Eigen::VectorXd state(6);
           state << x_next, y_next, psi_next, v_next, cte_next, epsi_next;
           auto mpc_solution = mpc.Solve(state, coeffs);
